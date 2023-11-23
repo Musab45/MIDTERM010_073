@@ -20,19 +20,23 @@ int main()
 		//Get Sales Data
 		cout << "Enter Number of Items Sold: ";
 		cin >> sale;
-		remaining_stock = total_stock - sale;
+		remaining_stock = remaining_stock - sale;
+		cout << "\nRemaining Stock is " << remaining_stock << endl;
 		
 		//Restock Process
 		if (remaining_stock < stock_min)
 		{
-			cout << "\nStock Below Minimum Quantitiy!" << endl;
-			cout << "Enter Restock Amount : ";
-			cin >> restock_amount;
-			remaining_stock += restock_amount;
+			while (remaining_stock < stock_min)
+			{
+				cout << "\nStock Below Minimum Quantitiy!" << endl;
+				cout << "Enter Restock Amount : ";
+				cin >> restock_amount;
+				remaining_stock += restock_amount;
+			}
 		}
 		
 		//Show Remaining Stock
-		cout << "Remaining Stock is " << remaining_stock << endl;
+		cout << "\nRemaining Stock is " << remaining_stock << endl;
 	}
 
 	return 0;
