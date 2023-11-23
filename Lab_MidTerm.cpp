@@ -32,6 +32,7 @@ int main()
 				cout << "Enter Restock Amount : ";
 				cin >> restock_amount;
 				remaining_stock += restock_amount;
+				cout << "\nRemaining Stock is " << remaining_stock << endl;
 			}
 		}
 		
